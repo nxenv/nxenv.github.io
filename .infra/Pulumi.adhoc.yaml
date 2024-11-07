@@ -1,0 +1,91 @@
+config:
+  api:cert:
+    key: |-
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEowIBAAKCAQEAyGzVJVj3CcT7oSGVtZmGzAz4ashHU6anDs0HeEfBF/XuUc/d
+      l+Tg2I7D1pbYgN9XkcqfmKVmT8pKSl1TvjDQ92BscqCCqer1ks5X8YstpRbMPBiQ
+      AXOL+QQH5tMyXuNjNmD4oJ6ljAeeh+CIjhbecm8mIDLLhgkfkRME//00sVf0berD
+      vMA2kLG20Rw8W7qCY+AYZzAS5OPoX7cg8KM6xuvS53ijMxqXV69vkHPGoYfWG0XC
+      oQFiWPu9sZ4y1RtstPW+XDuWBbi63kBMR2gm6S+tkxhzAgWZNOhtqvSTFxKH9c51
+      /jTCLDrPvHNlzNoeqhvaowUmvOrRoT1TZ8hs7QIDAQABAoIBAHe0OKFzvygAlGEq
+      U+YAaffZD02HjMIzWLeIURvPj04mPk5yneCofHoa2nCB65Ec04ppwGRE9RRWt4Qu
+      tWN0eHonBt53a1Lc2Ar0XqYPABYHxbdm3CthvYnelHGSVhVCLfE+fYBBAJLfwhlZ
+      S3XBxt4F8HlunQvSyx20hFn3+s6nsLQo19Hu0Ex4abERktdRQtG6aaDJWsG1CAww
+      Ky7CNcuTBJIIlm/qcRxthYBj5yoYFiOWB6MjRL+ILdzibMw61amk96AiNaxZH+ol
+      ZAc1lnkbAgyrJKkS3kXEhIslgDiaU/SGgnA+mMtXrhV05zTS91CyMjwWrsfGIC0t
+      HZO8wWkCgYEA68W/VqFqULc+GEhaYafDWVjbUWM9RjHUzyH3/aYrQ89r9ZPY+ejc
+      Y2THatvwfeq5P0HI7d+Hm/m6lE0c91lxEh0PI0mLPtMvVR+UHziBC+udxi5J09HG
+      q9vN5YAigPbwLhjsmUWscivXmFPrvFWN+4n+nTNrp1KtmVANkAsNhMcCgYEA2Z7B
+      LDwwlyynDRGIVu++ODx34Kvy7vNWnJn588ay5vUjwAuiONU+mgl+Cj0hWkgE9rTI
+      TEqh+OWqHHLuSYb+4ZujQjWddBoSIIOa70ZT4racdybFbjn3vzVtf/59fvSLzZFq
+      2Unt7cDxk3z36kg0yZdSGwg7GkKIneRzzaoFZKsCgYBkOkhAt5XOgldvUzK42Ox+
+      ivuQ+bMOqBhjhXk65uz1grPOTe+rLYai6jCsCJuPq7zcW0bjeGbZs6vRZ4asz+T1
+      Yk0RHy6Gopg4g5ggPZD+VEdZ/Et+NGtUm7hHm9UPJeqsbgQGlEverSyVoPdRtL0K
+      9Xq7sSROmSMbTaC2Xzx7+QKBgFoG+xM5s0BXEKSvZB/S/nZ1TYJ8n/uKX4JZkLXw
+      tYImV6vTJEEutr8yvhmuQGYA9Uy6bUJifa9iE4XBZiK03iynHlr9oy2su2MIDsh9
+      56YatY/1UifPg1Zu2+XfejtTH6LjTbimhO+eqlHBmS4qwOvE1gqo1QqAC9SF9gJX
+      G/QRAoGBANrPqk80J+WGy8Rj8LZXsKUxWtPrzt74Ahj9EmKws9ZGaEzslUcGAbzK
+      UgXIqPJkxaXCy7MJIEDUaHZWj7zNmah1J6XWaXDLYUHtkXYQViIIZ8bs7ze+cAkH
+      ZNvxwm5r+sU1dJpcmlzDgnHcO3QcdGHBkNFscGtTmEXUSP4to2el
+      -----END RSA PRIVATE KEY-----
+    public: |-
+      -----BEGIN PUBLIC KEY-----
+      MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyGzVJVj3CcT7oSGVtZmG
+      zAz4ashHU6anDs0HeEfBF/XuUc/dl+Tg2I7D1pbYgN9XkcqfmKVmT8pKSl1TvjDQ
+      92BscqCCqer1ks5X8YstpRbMPBiQAXOL+QQH5tMyXuNjNmD4oJ6ljAeeh+CIjhbe
+      cm8mIDLLhgkfkRME//00sVf0berDvMA2kLG20Rw8W7qCY+AYZzAS5OPoX7cg8KM6
+      xuvS53ijMxqXV69vkHPGoYfWG0XCoQFiWPu9sZ4y1RtstPW+XDuWBbi63kBMR2gm
+      6S+tkxhzAgWZNOhtqvSTFxKH9c51/jTCLDrPvHNlzNoeqhvaowUmvOrRoT1TZ8hs
+      7QIDAQAB
+      -----END PUBLIC KEY-----
+  api:debeziumDbPass: "12345"
+  api:debeziumDbUser: postgres
+  api:enablePersonalizedDigest: "false"
+  api:env:
+    accessSecret: topsecret
+    analyticsUrl: http://localhost:3000
+    cioReportingWebhookSecret: topsecret
+    cioWebhookSecret: topsecret
+    commentsPrefix: http://webapp.local.com:5002
+    cookiesKey: topsecret
+    defaultImageRatio: 1
+    defaultImageUrl: https://res.cloudinary.com/daily-now/image/upload/s--P4t4XyoV--/f_auto/v1722860399/public/Placeholder%2001,https://res.cloudinary.com/daily-now/image/upload/s--VDukGCjf--/f_auto/v1722860399/public/Placeholder%2002,https://res.cloudinary.com/daily-now/image/upload/s--HRgLpUt6--/f_auto/v1722860399/public/Placeholder%2003,https://res.cloudinary.com/daily-now/image/upload/s--foaA6JGU--/f_auto/v1722860399/public/Placeholder%2004,https://res.cloudinary.com/daily-now/image/upload/s--CxzD6vbw--/f_auto/v1722860399/public/Placeholder%2005,https://res.cloudinary.com/daily-now/image/upload/s--ZrL_HSsR--/f_auto/v1722860399/public/Placeholder%2006,https://res.cloudinary.com/daily-now/image/upload/s--1KxV4ohY--/f_auto/v1722860400/public/Placeholder%2007,https://res.cloudinary.com/daily-now/image/upload/s--0_ODbtD2--/f_auto/v1722860399/public/Placeholder%2008,https://res.cloudinary.com/daily-now/image/upload/s--qPvKM23u--/f_auto/v1722860399/public/Placeholder%2009,https://res.cloudinary.com/daily-now/image/upload/s--OHB84bZF--/f_auto/v1722860399/public/Placeholder%2010,https://res.cloudinary.com/daily-now/image/upload/s--2-1xRawN--/f_auto/v1722860399/public/Placeholder%2011,https://res.cloudinary.com/daily-now/image/upload/s--58gMhC4P--/f_auto/v1722860399/public/Placeholder%2012
+    digestQueueConcurrency: 1000
+    enablePubsub: true
+    gcloudProject: local
+    heimdallOrigin: http://heimdall-api
+    ignoredWorkEmailDomains: "igored.com,ignored.org"
+    jwtAudience: Daily Staging
+    jwtIssuer: Daily API Staging
+    jwtSecret: '|r+.2!!!.Qf_-|63*%.D'
+    kratosOrigin: http://heimdall-kratos-public
+    logLevel: info
+    meiliIndex: dailydev
+    meiliOrigin: 'http://localhost:7700/' # your local inet address, you can update it in .env file, can be sorted by adding meilisearch to local pulumi stack
+    meiliToken: topsecret
+    metricsEnabled: false
+    nodeEnv: development
+    ogUrl: http://localhost:3000
+    otelEnabled: false
+    otelExporterOtlpEndpoint: http://otel-collector.local.svc.cluster.local:4318/v1/traces
+    otelTracesSampler: always_on
+    personalizedDigestSecret: topsecret
+    postScraperOrigin: http://post-scraper-one-ai-server
+    pubsubEmulatorHost: pubsub:8085
+    pubsubProjectId: local
+    redisHost: redis
+    redisPort: 6379
+    submitArticleThreshold: 250
+    typeormDatabase: api
+    typeormHost: postgres
+    typeormPassword: 12345
+    typeormUsername: postgres
+    tz: UTC
+    urlPrefix: http://api.local.com
+    vordrIps: ""
+    vordrWords: "VordrWillCatchYou,AndVordrWillHaveFun"
+  api:k8s:
+    namespace: local
+  api:temporal:
+    chain: ''
+    key: ''

@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`function updateMentions should update mentions based on passed comment ids utilizing old and new username 1`] = `
+Object {
+  "comments": 0,
+  "content": "@Solevilla",
+  "contentHtml": "<p><a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a></p>
+",
+  "createdAt": Any<Date>,
+  "downvotes": 0,
+  "featured": false,
+  "flags": Object {},
+  "id": "cm",
+  "lastUpdatedAt": null,
+  "parentId": null,
+  "postId": "p1",
+  "upvotes": 0,
+  "userId": "1",
+}
+`;
+
+exports[`function updateMentions should update mentions based on passed comment ids utilizing old and new username 2`] = `
+Object {
+  "comments": 0,
+  "content": "@sshanzel",
+  "contentHtml": "<p><a href=\\"http://localhost:5002/sshanzel\\" data-mention-id=\\"7\\" data-mention-username=\\"sshanzel\\">@sshanzel</a></p>
+",
+  "createdAt": Any<Date>,
+  "downvotes": 0,
+  "featured": false,
+  "flags": Object {},
+  "id": "cm",
+  "lastUpdatedAt": null,
+  "parentId": null,
+  "postId": "p1",
+  "upvotes": 0,
+  "userId": "1",
+}
+`;
+
+exports[`mutation commentOnComment should comment on a comment 1`] = `
+Object {
+  "comments": 0,
+  "content": "# my comment http://daily.dev",
+  "id": Any<String>,
+  "parentId": "c1",
+  "postId": "p1",
+}
+`;
+
+exports[`mutation commentOnPost should comment markdown but restrict mentioning ownself 1`] = `
+Object {
+  "content": "@Ido",
+  "contentHtml": "<p>@Ido</p>
+",
+  "id": Any<String>,
+  "parentId": null,
+}
+`;
+
+exports[`mutation commentOnPost should comment markdown on a post 1`] = `
+Object {
+  "content": "# my comment http://daily.dev",
+  "contentHtml": "<h1>my comment <a href=\\"http://daily.dev\\" target=\\"_blank\\" rel=\\"noopener nofollow\\">http://daily.dev</a></h1>
+",
+  "id": Any<String>,
+  "parentId": null,
+}
+`;
+
+exports[`mutation commentOnPost should comment markdown on a post with user mention 1`] = `
+Object {
+  "content": "@Lee",
+  "contentHtml": "<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a></p>
+",
+  "id": Any<String>,
+  "parentId": null,
+}
+`;
+
+exports[`mutation commentOnPost should comment markdown on a post with user mention inside the squad only 1`] = `
+Object {
+  "content": "@sample1 @sample2",
+  "contentHtml": "<p><a href=\\"http://localhost:5002/sample1\\" data-mention-id=\\"sample1\\" data-mention-username=\\"sample1\\">@sample1</a> @sample2</p>
+",
+  "id": Any<String>,
+  "parentId": null,
+}
+`;
+
+exports[`query commentPreview should only render markdown not HTML 1`] = `
+"<h1>Test &lt;button&gt;Test&lt;/button&gt;</h1>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content 1`] = `
+"<h1>Test</h1>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content 2`] = `
+"<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with hyphen mention 1`] = `
+"<p><a href=\\"http://localhost:5002/Lee-Hansel\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee-Hansel\\">@Lee-Hansel</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 1`] = `
+"<h1>Test</h1>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 2`] = `
+"<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 3`] = `
+"<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a>.</p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 4`] = `
+"<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a>/<a href=\\"http://localhost:5002/Hansel\\" data-mention-id=\\"5\\" data-mention-username=\\"Hansel\\">@Hansel</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 5`] = `
+"<p><a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a>,<a href=\\"http://localhost:5002/Hansel\\" data-mention-id=\\"5\\" data-mention-username=\\"Hansel\\">@Hansel</a>,<a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 6`] = `
+"<p>@Lee@Hansel@Solevilla</p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 7`] = `
+"<p>Hi@Solevilla</p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 8`] = `
+"<p>Hi!<a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 9`] = `
+"<p>Hi <a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a></p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 10`] = `
+"<p>Hi <a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a>!</p>
+"
+`;
+
+exports[`query commentPreview should return markdown equivalent of the content with special characters on mention 11`] = `
+"<p>Hi <a href=\\"http://localhost:5002/Solevilla\\" data-mention-id=\\"7\\" data-mention-username=\\"Solevilla\\">@Solevilla</a>! This is normal comment, let’s tag <a href=\\"http://localhost:5002/Lee\\" data-mention-id=\\"4\\" data-mention-username=\\"Lee\\">@Lee</a> as well</p>
+"
+`;
+
+exports[`query commentPreview should return markdown with user mentioned inside squad 1`] = `
+"<p><a href=\\"http://localhost:5002/sample1\\" data-mention-id=\\"sample1\\" data-mention-username=\\"sample1\\">@sample1</a> @sample2</p>
+"
+`;
+
+exports[`query commentUpvotes should return users that upvoted the comment by id in descending order 1`] = `
+Object {
+  "commentUpvotes": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "user": Object {
+            "bio": null,
+            "image": "https://daily.dev/tsahi.jpg",
+            "name": "Tsahi",
+            "username": null,
+          },
+          "votedAt": "2021-09-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "user": Object {
+            "bio": null,
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+            "username": null,
+          },
+          "votedAt": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`query postComments should fetch comments and sub-comments of a post 1`] = `
+Object {
+  "postComments": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "1",
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+          },
+          "children": Object {
+            "edges": Array [
+              Object {
+                "node": Object {
+                  "author": Object {
+                    "id": "1",
+                    "image": "https://daily.dev/ido.jpg",
+                    "name": "Ido",
+                  },
+                  "content": "child comment",
+                  "contentHtml": "<p>child comment</p>",
+                  "createdAt": "2020-02-07T00:00:00.000Z",
+                  "id": "c2",
+                  "permalink": "http://localhost:5002/posts/p1#c-c2",
+                  "upvoted": null,
+                },
+              },
+            ],
+            "pageInfo": Object {
+              "endCursor": "dGltZToxNTgxMDMzNjAwMDAw",
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment",
+          "contentHtml": "<p>parent comment</p>",
+          "createdAt": "2020-02-06T00:00:00.000Z",
+          "id": "c1",
+          "permalink": "http://localhost:5002/posts/p1#c-c1",
+          "upvoted": null,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "2",
+            "image": "https://daily.dev/tsahi.jpg",
+            "name": "Tsahi",
+          },
+          "children": Object {
+            "edges": Array [],
+            "pageInfo": Object {
+              "endCursor": null,
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment #2",
+          "contentHtml": "<p>parent comment #2</p>",
+          "createdAt": "2020-02-08T00:00:00.000Z",
+          "id": "c3",
+          "permalink": "http://localhost:5002/posts/p1#c-c3",
+          "upvoted": null,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "3",
+            "image": "https://daily.dev/nimrod.jpg",
+            "name": "Nimrod",
+          },
+          "children": Object {
+            "edges": Array [
+              Object {
+                "node": Object {
+                  "author": Object {
+                    "id": "2",
+                    "image": "https://daily.dev/tsahi.jpg",
+                    "name": "Tsahi",
+                  },
+                  "content": "child comment #3",
+                  "contentHtml": "<p>child comment #3</p>",
+                  "createdAt": "2020-02-10T00:00:00.000Z",
+                  "id": "c7",
+                  "permalink": "http://localhost:5002/posts/p1#c-c7",
+                  "upvoted": null,
+                },
+              },
+            ],
+            "pageInfo": Object {
+              "endCursor": "dGltZToxNTgxMjkyODAwMDAw",
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment #4",
+          "contentHtml": "<p>parent comment #4</p>",
+          "createdAt": "2020-02-09T00:00:00.000Z",
+          "id": "c6",
+          "permalink": "http://localhost:5002/posts/p1#c-c6",
+          "upvoted": null,
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNTgxMjA2NDAwMDAw",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query postComments should fetch comments and sub-comments of a post with upvoted 1`] = `
+Object {
+  "postComments": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "1",
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+          },
+          "children": Object {
+            "edges": Array [
+              Object {
+                "node": Object {
+                  "author": Object {
+                    "id": "1",
+                    "image": "https://daily.dev/ido.jpg",
+                    "name": "Ido",
+                  },
+                  "content": "child comment",
+                  "contentHtml": "<p>child comment</p>",
+                  "createdAt": "2020-02-07T00:00:00.000Z",
+                  "id": "c2",
+                  "permalink": "http://localhost:5002/posts/p1#c-c2",
+                  "upvoted": false,
+                },
+              },
+            ],
+            "pageInfo": Object {
+              "endCursor": "dGltZToxNTgxMDMzNjAwMDAw",
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment",
+          "contentHtml": "<p>parent comment</p>",
+          "createdAt": "2020-02-06T00:00:00.000Z",
+          "id": "c1",
+          "permalink": "http://localhost:5002/posts/p1#c-c1",
+          "upvoted": true,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "2",
+            "image": "https://daily.dev/tsahi.jpg",
+            "name": "Tsahi",
+          },
+          "children": Object {
+            "edges": Array [],
+            "pageInfo": Object {
+              "endCursor": null,
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment #2",
+          "contentHtml": "<p>parent comment #2</p>",
+          "createdAt": "2020-02-08T00:00:00.000Z",
+          "id": "c3",
+          "permalink": "http://localhost:5002/posts/p1#c-c3",
+          "upvoted": false,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "3",
+            "image": "https://daily.dev/nimrod.jpg",
+            "name": "Nimrod",
+          },
+          "children": Object {
+            "edges": Array [
+              Object {
+                "node": Object {
+                  "author": Object {
+                    "id": "2",
+                    "image": "https://daily.dev/tsahi.jpg",
+                    "name": "Tsahi",
+                  },
+                  "content": "child comment #3",
+                  "contentHtml": "<p>child comment #3</p>",
+                  "createdAt": "2020-02-10T00:00:00.000Z",
+                  "id": "c7",
+                  "permalink": "http://localhost:5002/posts/p1#c-c7",
+                  "upvoted": true,
+                },
+              },
+            ],
+            "pageInfo": Object {
+              "endCursor": "dGltZToxNTgxMjkyODAwMDAw",
+              "hasNextPage": false,
+            },
+          },
+          "content": "parent comment #4",
+          "contentHtml": "<p>parent comment #4</p>",
+          "createdAt": "2020-02-09T00:00:00.000Z",
+          "id": "c6",
+          "permalink": "http://localhost:5002/posts/p1#c-c6",
+          "upvoted": false,
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNTgxMjA2NDAwMDAw",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query recommendedMentions should return users with user or username starting with the query prioritizing previously mentioned ones 1`] = `
+Array [
+  Object {
+    "id": "6",
+    "image": "https://daily.dev/samson.jpg",
+    "name": "Samson",
+    "username": "Samson",
+  },
+  Object {
+    "id": "7",
+    "image": "https://daily.dev/solevilla.jpg",
+    "name": "Solevilla",
+    "username": "Solevilla",
+  },
+  Object {
+    "id": "sample",
+    "image": "sample/image",
+    "name": "sample",
+    "username": "sample",
+  },
+]
+`;
+
+exports[`query userComments should fetch comments by user id 1`] = `
+Object {
+  "userComments": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "1",
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+          },
+          "content": "child comment #2",
+          "contentHtml": "<p>child comment #2</p>",
+          "createdAt": "2020-02-10T00:00:00.000Z",
+          "id": "c5",
+          "permalink": "http://localhost:5002/posts/p2#c-c5",
+          "upvoted": null,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "1",
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+          },
+          "content": "child comment",
+          "contentHtml": "<p>child comment</p>",
+          "createdAt": "2020-02-07T00:00:00.000Z",
+          "id": "c2",
+          "permalink": "http://localhost:5002/posts/p1#c-c2",
+          "upvoted": null,
+        },
+      },
+      Object {
+        "node": Object {
+          "author": Object {
+            "id": "1",
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+          },
+          "content": "parent comment",
+          "contentHtml": "<p>parent comment</p>",
+          "createdAt": "2020-02-06T00:00:00.000Z",
+          "id": "c1",
+          "permalink": "http://localhost:5002/posts/p1#c-c1",
+          "upvoted": null,
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNTgwOTQ3MjAwMDAw",
+      "hasNextPage": false,
+    },
+  },
+}
+`;

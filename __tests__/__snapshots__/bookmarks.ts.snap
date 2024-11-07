@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mutation addBookmarks should add new bookmarks 1`] = `
+Array [
+  Bookmark {
+    "postId": "p1",
+    "userId": "1",
+  },
+  Bookmark {
+    "postId": "p3",
+    "userId": "1",
+  },
+]
+`;
+
+exports[`mutation addBookmarks should ignore bookmarks of deleted posts 1`] = `
+Array [
+  Bookmark {
+    "postId": "p1",
+    "userId": "1",
+  },
+  Bookmark {
+    "postId": "p3",
+    "userId": "1",
+  },
+]
+`;
+
+exports[`mutation addBookmarks should ignore conflicts 1`] = `
+Array [
+  Bookmark {
+    "postId": "p1",
+    "userId": "1",
+  },
+  Bookmark {
+    "postId": "p3",
+    "userId": "1",
+  },
+]
+`;
+
+exports[`mutation addBookmarks should ignore nulls 1`] = `
+Array [
+  Bookmark {
+    "postId": "p1",
+    "userId": "1",
+  },
+  Bookmark {
+    "postId": "p3",
+    "userId": "1",
+  },
+]
+`;
+
+exports[`query bookmarks should include banned posts 1`] = `
+Object {
+  "bookmarksFeed": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "id": "p3",
+          "source": Object {
+            "id": "c",
+            "image": "http://image.com/c",
+            "name": "C",
+            "public": true,
+          },
+          "tags": Array [],
+        },
+      },
+      Object {
+        "node": Object {
+          "id": "p1",
+          "source": Object {
+            "id": "a",
+            "image": "http://image.com/a",
+            "name": "A",
+            "public": true,
+          },
+          "tags": Array [
+            "javascript",
+            "webdev",
+          ],
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query bookmarks should return bookmarks from list 1`] = `
+Object {
+  "bookmarksFeed": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "id": "p3",
+          "source": Object {
+            "id": "c",
+            "image": "http://image.com/c",
+            "name": "C",
+            "public": true,
+          },
+          "tags": Array [],
+        },
+      },
+      Object {
+        "node": Object {
+          "id": "p5",
+          "source": Object {
+            "id": "b",
+            "image": "http://image.com/b",
+            "name": "B",
+            "public": true,
+          },
+          "tags": Array [
+            "html",
+            "javascript",
+          ],
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query bookmarks should return bookmarks ordered by time 1`] = `
+Object {
+  "bookmarksFeed": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "id": "p3",
+          "source": Object {
+            "id": "c",
+            "image": "http://image.com/c",
+            "name": "C",
+            "public": true,
+          },
+          "tags": Array [],
+        },
+      },
+      Object {
+        "node": Object {
+          "id": "p1",
+          "source": Object {
+            "id": "a",
+            "image": "http://image.com/a",
+            "name": "A",
+            "public": true,
+          },
+          "tags": Array [
+            "javascript",
+            "webdev",
+          ],
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query bookmarks should return unread bookmarks only 1`] = `
+Object {
+  "bookmarksFeed": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "id": "p1",
+          "source": Object {
+            "id": "a",
+            "image": "http://image.com/a",
+            "name": "A",
+            "public": true,
+          },
+          "tags": Array [
+            "javascript",
+            "webdev",
+          ],
+        },
+      },
+      Object {
+        "node": Object {
+          "id": "p5",
+          "source": Object {
+            "id": "b",
+            "image": "http://image.com/b",
+            "name": "B",
+            "public": true,
+          },
+          "tags": Array [
+            "html",
+            "javascript",
+          ],
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query searchBookmarks should return bookmarks search empty feed 1`] = `
+Object {
+  "searchBookmarks": Object {
+    "edges": Array [],
+    "pageInfo": Object {
+      "endCursor": null,
+      "hasNextPage": false,
+    },
+    "query": "not found",
+  },
+}
+`;
+
+exports[`query searchBookmarks should return bookmarks search feed 1`] = `
+Object {
+  "searchBookmarks": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "id": "p1",
+          "readTime": null,
+          "source": Object {
+            "id": "a",
+            "image": "http://image.com/a",
+            "name": "A",
+            "public": true,
+          },
+          "tags": Array [
+            "javascript",
+            "webdev",
+          ],
+          "title": "P1",
+          "url": "http://p1.com",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+      "hasNextPage": false,
+    },
+    "query": "p1",
+  },
+}
+`;
+
+exports[`query searchBookmarksSuggestions should return bookmark search suggestions 1`] = `
+Object {
+  "searchBookmarksSuggestions": Object {
+    "hits": Array [
+      Object {
+        "title": "<strong>P1</strong>",
+      },
+    ],
+    "query": "p1",
+  },
+}
+`;

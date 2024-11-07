@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "outDir": "build",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "__tests__"
+  ],
+  "ts-node": {
+    "swc": true
+  },
+  "files": ["node_modules/jest-extended/types/index.d.ts"],
+  "include": [
+    "bin/**/*.ts",
+    "src/**/*.ts"
+  ]
+}

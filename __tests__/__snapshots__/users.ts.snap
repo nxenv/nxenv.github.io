@@ -1,0 +1,559 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mutation hideReadHistory should set view history hidden property to true 1`] = `
+Array [
+  View {
+    "hidden": false,
+    "postId": "p1",
+    "referer": null,
+    "timestamp": 2020-09-22T07:15:51.247Z,
+    "userId": "1",
+  },
+  View {
+    "hidden": true,
+    "postId": "p2",
+    "referer": null,
+    "timestamp": 2021-09-22T07:15:51.247Z,
+    "userId": "1",
+  },
+]
+`;
+
+exports[`mutation hideReadHistory should set view history hidden property to true without matching milliseconds value 1`] = `
+Array [
+  View {
+    "hidden": false,
+    "postId": "p2",
+    "referer": null,
+    "timestamp": 2019-09-22T07:15:51.247Z,
+    "userId": "1",
+  },
+  View {
+    "hidden": true,
+    "postId": "p1",
+    "referer": null,
+    "timestamp": 2020-09-22T07:15:51.247Z,
+    "userId": "1",
+  },
+]
+`;
+
+exports[`mutation updateUserProfile should update user profile 1`] = `
+Object {
+  "bio": null,
+  "createdAt": Any<String>,
+  "experienceLevel": null,
+  "github": null,
+  "hashnode": null,
+  "id": "1",
+  "image": "https://daily.dev/ido.jpg",
+  "infoConfirmed": false,
+  "language": null,
+  "name": "Ido",
+  "notificationEmail": true,
+  "permalink": "http://localhost:5002/aaa1",
+  "timezone": "Europe/London",
+  "twitter": null,
+  "username": "aaa1",
+}
+`;
+
+exports[`query readHistory should return the reading history of user in descending order 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+          "timestamp": "2021-09-22T07:15:51.247Z",
+          "timestampDb": "2021-09-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p2",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/b",
+            },
+            "title": "P2",
+            "url": "http://p2.com",
+          },
+          "timestamp": "2020-09-22T07:15:51.247Z",
+          "timestampDb": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjAwNzU4OTUxMjQ3",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query readHistory should return the same date for a non-timezoned user 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+          "timestamp": "2020-09-22T07:15:51.247Z",
+          "timestampDb": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjAwNzU4OTUxMjQ3",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query readHistory should return two different dates for a timezoned user 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+          "timestamp": "2020-09-21T20:15:51.247Z",
+          "timestampDb": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjAwNzE5MzUxMjQ3",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query readHistory should return user's reading history in without the hidden ones 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p2",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/b",
+            },
+            "title": "P2",
+            "url": "http://p2.com",
+          },
+          "timestamp": "2021-09-22T07:15:51.247Z",
+          "timestampDb": "2021-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjMyMjk0OTUxMjQ3",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query readHistory should return user's reading history paginated 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p2",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/b",
+            },
+            "title": "P2",
+            "url": "http://p2.com",
+          },
+          "timestamp": "2021-10-22T07:15:51.247Z",
+          "timestampDb": "2021-10-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p2",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/b",
+            },
+            "title": "P2",
+            "url": "http://p2.com",
+          },
+          "timestamp": "2021-09-22T07:15:51.247Z",
+          "timestampDb": "2021-09-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p2",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/b",
+            },
+            "title": "P2",
+            "url": "http://p2.com",
+          },
+          "timestamp": "2021-08-22T07:15:51.247Z",
+          "timestampDb": "2021-08-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+          "timestamp": "2020-09-22T07:15:51.247Z",
+          "timestampDb": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjAwNzU4OTUxMjQ3",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query search reading history should return reading history search empty feed 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [],
+    "pageInfo": Object {
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query search reading history should return reading history search feed 1`] = `
+Object {
+  "readHistory": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+        },
+      },
+      Object {
+        "node": Object {
+          "post": Object {
+            "id": "p1",
+            "image": "sample.image.test",
+            "source": Object {
+              "image": "http://image.com/a",
+            },
+            "title": "P1",
+            "url": "http://p1.com",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query searchReadingHistorySuggestions should return reading history search suggestions 1`] = `
+Object {
+  "searchReadingHistorySuggestions": Object {
+    "hits": Array [
+      Object {
+        "title": "<strong>P1</strong>",
+      },
+    ],
+    "query": "p1",
+  },
+}
+`;
+
+exports[`query user should return user info with name, username, and image 1`] = `
+Object {
+  "image": "https://daily.dev/ido.jpg",
+  "name": "Ido",
+  "username": "ido",
+}
+`;
+
+exports[`query userMostReadTags should return the user most read tags 1`] = `
+Array [
+  Object {
+    "count": 5,
+    "percentage": 0.7142857142857143,
+    "total": 7,
+    "value": "javascript",
+  },
+  Object {
+    "count": 3,
+    "percentage": 0.42857142857142855,
+    "total": 7,
+    "value": "security",
+  },
+  Object {
+    "count": 3,
+    "percentage": 0.42857142857142855,
+    "total": 7,
+    "value": "ai",
+  },
+  Object {
+    "count": 2,
+    "percentage": 0.2857142857142857,
+    "total": 7,
+    "value": "devops",
+  },
+  Object {
+    "count": 1,
+    "percentage": 0.14285714285714285,
+    "total": 7,
+    "value": "backend",
+  },
+]
+`;
+
+exports[`query userMostReadTags should return the user most read tags 2`] = `
+Array [
+  Object {
+    "count": 5,
+    "percentage": 0.7142857142857143,
+    "total": 7,
+    "value": "javascript",
+  },
+  Object {
+    "count": 3,
+    "percentage": 0.42857142857142855,
+    "total": 7,
+    "value": "security",
+  },
+  Object {
+    "count": 3,
+    "percentage": 0.42857142857142855,
+    "total": 7,
+    "value": "ai",
+  },
+  Object {
+    "count": 2,
+    "percentage": 0.2857142857142857,
+    "total": 7,
+    "value": "devops",
+  },
+  Object {
+    "count": 1,
+    "percentage": 0.14285714285714285,
+    "total": 7,
+    "value": "cloud",
+  },
+  Object {
+    "count": 1,
+    "percentage": 0.14285714285714285,
+    "total": 7,
+    "value": "crypto",
+  },
+  Object {
+    "count": 1,
+    "percentage": 0.14285714285714285,
+    "total": 7,
+    "value": "golang",
+  },
+  Object {
+    "count": 1,
+    "percentage": 0.14285714285714285,
+    "total": 7,
+    "value": "web3",
+  },
+]
+`;
+
+exports[`query userReadHistory should return the read history 1`] = `
+Array [
+  Object {
+    "date": "2021-04-14",
+    "reads": 2,
+  },
+  Object {
+    "date": "2021-04-23",
+    "reads": 1,
+  },
+  Object {
+    "date": "2021-04-24",
+    "reads": 1,
+  },
+  Object {
+    "date": "2021-04-26",
+    "reads": 3,
+  },
+]
+`;
+
+exports[`query userReadHistory should return the timezone based read history 1`] = `
+Array [
+  Object {
+    "date": "2021-04-25",
+    "reads": 1,
+  },
+]
+`;
+
+exports[`query userReadingRank should return partially null result when the user asks for someone else 1`] = `
+Object {
+  "currentRank": 0,
+  "lastReadTime": null,
+  "progressThisWeek": null,
+  "rankLastWeek": null,
+  "rankThisWeek": null,
+  "readToday": null,
+  "tags": null,
+}
+`;
+
+exports[`query userReadingRank should return the last read time accurately 1`] = `
+Object {
+  "currentRank": 0,
+  "lastReadTime": "2021-10-22T07:15:51.247Z",
+  "progressThisWeek": 0,
+  "rankLastWeek": 0,
+  "rankThisWeek": 0,
+  "readToday": Anything,
+  "tags": Array [],
+}
+`;
+
+exports[`query userReadingRank should return the reading rank 1`] = `
+Object {
+  "currentRank": 2,
+  "lastReadTime": Anything,
+  "progressThisWeek": 4,
+  "rankLastWeek": 1,
+  "rankThisWeek": 2,
+  "readToday": Anything,
+  "tags": Array [],
+}
+`;
+
+exports[`query userReadingRankHistory should not count views in the same day multiple times 1`] = `
+Array [
+  Object {
+    "count": 2,
+    "rank": 0,
+  },
+  Object {
+    "count": 1,
+    "rank": 1,
+  },
+]
+`;
+
+exports[`query userReadingRankHistory should return the reading rank history 1`] = `
+Array [
+  Object {
+    "count": 1,
+    "rank": 0,
+  },
+  Object {
+    "count": 2,
+    "rank": 1,
+  },
+]
+`;
+
+exports[`query userReadingRankHistory should return the reading rank history utilizing timezone 1`] = `
+Array [
+  Object {
+    "count": 3,
+    "rank": 0,
+  },
+  Object {
+    "count": 1,
+    "rank": 1,
+  },
+]
+`;
+
+exports[`query userReadingRankHistory should return the reading rank history v2 utilizing timezone 1`] = `
+Array [
+  Object {
+    "count": 1,
+    "rank": 1,
+  },
+  Object {
+    "count": 2,
+    "rank": 3,
+  },
+]
+`;
+
+exports[`query userStats should return partial user stats when no posts or no comments 1`] = `
+Object {
+  "userStats": Object {
+    "numCommentUpvotes": 2,
+    "numComments": 1,
+    "numPostUpvotes": 0,
+    "numPostViews": 0,
+    "numPosts": 0,
+  },
+}
+`;
+
+exports[`query userStats should return the user stats 1`] = `
+Object {
+  "userStats": Object {
+    "numCommentUpvotes": 15,
+    "numComments": 2,
+    "numPostUpvotes": 20,
+    "numPostViews": 140,
+    "numPosts": 4,
+  },
+}
+`;

@@ -1,0 +1,13 @@
+.idea/
+.garden/
+build/
+node_modules/
+.env.development
+.env.production
+local.sh
+prod.sh
+schema.graphql
+debezium/conf/key.json
+debezium/data
+coverage
+.DS_Store

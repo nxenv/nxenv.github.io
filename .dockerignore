@@ -1,0 +1,12 @@
+.idea/
+.garden/
+.infra/
+.circleci/
+node_modules/
+.env.development
+.env.production
+local.sh
+prod.sh
+schema.graphql
+debezium/conf/key.json
+debezium/data

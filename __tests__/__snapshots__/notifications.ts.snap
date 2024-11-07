@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`query banner should return empty response when no relevant banner 1`] = `
+Object {
+  "banner": null,
+}
+`;
+
+exports[`query banner should return the banner 1`] = `
+Object {
+  "banner": Object {
+    "cta": "CTA",
+    "subtitle": "Subtitle",
+    "theme": "Theme",
+    "title": "Title",
+    "url": "https://daily.dev",
+  },
+}
+`;
+
+exports[`query notifications should return pagination response 1`] = `
+Object {
+  "notifications": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-05-02T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #1",
+          "type": "comment_mention",
+        },
+      },
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-05-01T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #2",
+          "type": "comment_mention",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjE5ODI3MjAwMDAw",
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query notifications should return pagination response 2`] = `
+Object {
+  "notifications": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-04-30T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #3",
+          "type": "comment_mention",
+        },
+      },
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-04-29T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #4",
+          "type": "comment_mention",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjE5NjU0NDAwMDAw",
+      "hasNextPage": true,
+    },
+  },
+}
+`;
+
+exports[`query notifications should return the notifications of the logged user 1`] = `
+Object {
+  "notifications": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-05-02T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #1",
+          "type": "comment_mention",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjE5OTEzNjAwMDAw",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query notifications should return the public notifications 1`] = `
+Object {
+  "notifications": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "attachments": Array [],
+          "avatars": Array [],
+          "createdAt": "2021-05-02T00:00:00.000Z",
+          "description": "description",
+          "icon": "icon",
+          "readAt": null,
+          "targetUrl": "https://daily.dev",
+          "title": "notification #1",
+          "type": "comment_mention",
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "dGltZToxNjE5OTEzNjAwMDAw",
+      "hasNextPage": false,
+    },
+  },
+}
+`;

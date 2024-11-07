@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`query searchTags should search for tags and order by value 1`] = `
+Object {
+  "searchTags": Object {
+    "hits": Array [
+      Object {
+        "name": "development",
+      },
+      Object {
+        "name": "webdev",
+      },
+    ],
+    "query": "dev",
+  },
+}
+`;
+
+exports[`query searchTags should take into account keyword synonyms 1`] = `
+Object {
+  "searchTags": Object {
+    "hits": Array [],
+    "query": "web-dev",
+  },
+}
+`;

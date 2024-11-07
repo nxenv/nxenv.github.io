@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`members field should exclude blocked members from result 1`] = `
+Object {
+  "source": Object {
+    "id": "a",
+    "members": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "role": "admin",
+            "source": Object {
+              "id": "a",
+            },
+            "user": Object {
+              "id": "1",
+            },
+          },
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "dGltZToxNjcxNDA4MDAwMDAw",
+        "hasNextPage": false,
+      },
+    },
+  },
+}
+`;
+
+exports[`members field should return source members 1`] = `
+Object {
+  "source": Object {
+    "id": "a",
+    "members": Object {
+      "edges": Array [
+        Object {
+          "node": Object {
+            "role": "member",
+            "source": Object {
+              "id": "a",
+            },
+            "user": Object {
+              "id": "2",
+            },
+          },
+        },
+        Object {
+          "node": Object {
+            "role": "admin",
+            "source": Object {
+              "id": "a",
+            },
+            "user": Object {
+              "id": "1",
+            },
+          },
+        },
+      ],
+      "pageInfo": Object {
+        "endCursor": "dGltZToxNjcxNDA4MDAwMDAw",
+        "hasNextPage": false,
+      },
+    },
+  },
+}
+`;
+
+exports[`members field should return source members for private source when the user is a member 1`] = `
+Object {
+  "edges": Array [
+    Object {
+      "node": Object {
+        "role": "member",
+        "source": Object {
+          "id": "a",
+        },
+        "user": Object {
+          "id": "2",
+        },
+      },
+    },
+    Object {
+      "node": Object {
+        "role": "admin",
+        "source": Object {
+          "id": "a",
+        },
+        "user": Object {
+          "id": "1",
+        },
+      },
+    },
+  ],
+  "pageInfo": Object {
+    "endCursor": "dGltZToxNjcxNDA4MDAwMDAw",
+    "hasNextPage": false,
+  },
+}
+`;
+
+exports[`query source current member should return current member as admin 1`] = `
+Object {
+  "source": Object {
+    "currentMember": Object {
+      "permissions": Array [
+        "view",
+        "post",
+        "leave",
+        "invite",
+        "comment_delete",
+        "post_delete",
+        "post_pin",
+        "member_remove",
+        "edit",
+        "member_unblock",
+        "view_blocked_members",
+        "welcome_post_edit",
+        "member_role_update",
+        "post_limit",
+        "delete",
+        "connect_slack",
+      ],
+      "role": "admin",
+      "roleRank": 10,
+    },
+    "id": "a",
+  },
+}
+`;
+
+exports[`query source current member should return current member as member 1`] = `
+Object {
+  "source": Object {
+    "currentMember": Object {
+      "permissions": Array [
+        "view",
+        "post",
+        "leave",
+        "invite",
+      ],
+      "role": "member",
+      "roleRank": 0,
+    },
+    "id": "a",
+  },
+}
+`;
+
+exports[`query source current member should return null for annonymous users 1`] = `
+Object {
+  "source": Object {
+    "currentMember": null,
+    "id": "a",
+  },
+}
+`;
+
+exports[`query source current member should return null for user that's not in the source 1`] = `
+Object {
+  "source": Object {
+    "currentMember": null,
+    "id": "a",
+  },
+}
+`;
+
+exports[`query source should return source by id 1`] = `
+Object {
+  "source": Object {
+    "id": "a",
+    "image": "http://image.com/a",
+    "moderationRequired": false,
+    "name": "A",
+    "public": true,
+  },
+}
+`;
+
+exports[`query sourceMembers should return blocked users only when user is a moderator 1`] = `
+Object {
+  "sourceMembers": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "role": "blocked",
+          "roleRank": -1,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "2",
+            "name": "Tsahi",
+            "username": "tsahidaily",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query sourceMembers should return blocked users only when user is the admin 1`] = `
+Object {
+  "sourceMembers": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "role": "blocked",
+          "roleRank": -1,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "2",
+            "name": "Tsahi",
+            "username": "tsahidaily",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query sourceMembers should return source members of private source when user is a member 1`] = `
+Object {
+  "sourceMembers": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "role": "admin",
+          "roleRank": 10,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "1",
+            "name": "Ido",
+            "username": "idoshamun",
+          },
+        },
+      },
+      Object {
+        "node": Object {
+          "role": "member",
+          "roleRank": 0,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "2",
+            "name": "Tsahi",
+            "username": "tsahidaily",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjE=",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query sourceMembers should return source members of public source 1`] = `
+Object {
+  "sourceMembers": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "role": "admin",
+          "roleRank": 10,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "1",
+            "name": "Ido",
+            "username": "idoshamun",
+          },
+        },
+      },
+      Object {
+        "node": Object {
+          "role": "member",
+          "roleRank": 0,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "2",
+            "name": "Tsahi",
+            "username": "tsahidaily",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjE=",
+      "hasNextPage": false,
+    },
+  },
+}
+`;
+
+exports[`query sourceMembers should return source members of public source without blocked members 1`] = `
+Object {
+  "sourceMembers": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "role": "admin",
+          "roleRank": 10,
+          "source": Object {
+            "id": "a",
+          },
+          "user": Object {
+            "id": "1",
+            "name": "Ido",
+            "username": "idoshamun",
+          },
+        },
+      },
+    ],
+    "pageInfo": Object {
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjA=",
+      "hasNextPage": false,
+    },
+  },
+}
+`;

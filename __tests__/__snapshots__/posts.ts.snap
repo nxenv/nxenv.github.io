@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`author field should return null when author is not set 1`] = `
+Object {
+  "post": Object {
+    "author": null,
+  },
+}
+`;
+
+exports[`author field should return the author when set 1`] = `
+Object {
+  "post": Object {
+    "author": Object {
+      "id": "1",
+      "name": "Ido",
+    },
+  },
+}
+`;
+
+exports[`image fields should return default image when no image exists 1`] = `
+Object {
+  "post": Object {
+    "image": "https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/5",
+    "placeholder": "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAABAUGB//EACYQAAIABAQGAwAAAAAAAAAAAAECAAMEBRESE0IGByExQVFScZH/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwCgPMKtsdvWjpamiGsuCBVZzn3NmOAB+wYUni23kkz71OM09XObd5jBKufNagklprk4jux9QBqP82/YpQ//2Q==",
+    "ratio": 1,
+  },
+}
+`;
+
+exports[`image fields should return post image when exists 1`] = `
+Object {
+  "post": Object {
+    "image": "http://image.com",
+    "placeholder": "data:image/jpeg;base64,placeholder",
+    "ratio": 0.5,
+  },
+}
+`;
+
+exports[`mutation createFreeformPost should allow mention as part of the content 1`] = `
+"<p>Test <a href=\\"http://localhost:5002/lee\\" data-mention-id=\\"2\\" data-mention-username=\\"lee\\">@lee</a></p>
+"
+`;
+
+exports[`mutation createFreeformPost should create a freeform post if all parameters have passed 1`] = `
+"<h1>Updated content</h1>
+"
+`;
+
+exports[`mutation createFreeformPost should not allow mention outside of squad as part of the content being a freeform post 1`] = `
+"<p>Test @sample</p>
+"
+`;
+
+exports[`mutation editPost should allow author to update their freeform post 1`] = `
+"<h1>Updated content</h1>
+"
+`;
+
+exports[`mutation editPost should allow mention as part of the content 1`] = `
+"<p>Test <a href=\\"http://localhost:5002/lee\\" data-mention-id=\\"2\\" data-mention-username=\\"lee\\">@lee</a></p>
+"
+`;
+
+exports[`mutation editSharePost should update with mentioned users 1`] = `"<p>Test <a href=\\"http://localhost:5002/lee\\" data-mention-id=\\"2\\" data-mention-username=\\"lee\\">@lee</a> @non-existent</p>"`;
+
+exports[`mutation sharePost should share to squad with mentioned users 1`] = `"<p>Test <a href=\\"http://localhost:5002/lee\\" data-mention-id=\\"2\\" data-mention-username=\\"lee\\">@lee</a> @non-existent</p>"`;
+
+exports[`query post should return post by id 1`] = `
+Object {
+  "post": Object {
+    "id": "p1",
+    "readTime": null,
+    "source": Object {
+      "id": "a",
+      "image": "http://image.com/a",
+      "name": "A",
+      "public": true,
+    },
+    "tags": Array [
+      "javascript",
+      "webdev",
+    ],
+    "title": "P1",
+    "url": "http://p1.com",
+  },
+}
+`;
+
+exports[`query postByUrl should return post by canonical 1`] = `
+Object {
+  "postByUrl": Object {
+    "id": "p1",
+    "title": "P1",
+    "url": "http://p1.com",
+  },
+}
+`;
+
+exports[`query postByUrl should return post by url 1`] = `
+Object {
+  "postByUrl": Object {
+    "id": "p1",
+    "title": "P1",
+    "url": "http://p1.com",
+  },
+}
+`;
+
+exports[`query postByUrl should return post if query params attached 1`] = `
+Object {
+  "postByUrl": Object {
+    "id": "p1",
+    "title": "P1",
+    "url": "http://p1.com",
+  },
+}
+`;
+
+exports[`query postByUrl should return post if query params on youtube link 1`] = `
+Object {
+  "postByUrl": Object {
+    "id": "yt0",
+    "title": "Youtube video",
+    "url": "https://youtube.com/watch?v=123",
+  },
+}
+`;
+
+exports[`query postUpvotes should return users that upvoted the post by id in descending order 1`] = `
+Object {
+  "postUpvotes": Object {
+    "edges": Array [
+      Object {
+        "node": Object {
+          "user": Object {
+            "bio": null,
+            "image": "https://daily.dev/lee.jpg",
+            "name": "Lee",
+            "username": null,
+          },
+          "votedAt": "2021-09-22T07:15:51.247Z",
+        },
+      },
+      Object {
+        "node": Object {
+          "user": Object {
+            "bio": null,
+            "image": "https://daily.dev/ido.jpg",
+            "name": "Ido",
+            "username": null,
+          },
+          "votedAt": "2020-09-22T07:15:51.247Z",
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`scout field should return null when scout is not set 1`] = `
+Object {
+  "post": Object {
+    "author": null,
+    "scout": null,
+  },
+}
+`;
+
+exports[`scout field should return the scout and author correctly 1`] = `
+Object {
+  "post": Object {
+    "author": Object {
+      "id": "2",
+      "name": "Lee",
+    },
+    "scout": Object {
+      "id": "1",
+      "name": "Ido",
+    },
+  },
+}
+`;
+
+exports[`scout field should return the scout when set 1`] = `
+Object {
+  "post": Object {
+    "author": null,
+    "scout": Object {
+      "id": "1",
+      "name": "Ido",
+    },
+  },
+}
+`;
+
+exports[`source field should return the public representation 1`] = `
+Object {
+  "post": Object {
+    "source": Object {
+      "id": "a",
+      "image": "http://image.com/a",
+      "name": "A",
+      "public": true,
+    },
+  },
+}
+`;
+
+exports[`toc field should return null when toc is not set 1`] = `
+Object {
+  "post": Object {
+    "toc": null,
+  },
+}
+`;
+
+exports[`toc field should return the toc when set 1`] = `
+Object {
+  "post": Object {
+    "toc": Array [
+      Object {
+        "children": Array [
+          Object {
+            "id": "sub-1",
+            "text": "Sub 1",
+          },
+        ],
+        "id": "title-1",
+        "text": "Title 1",
+      },
+      Object {
+        "children": null,
+        "id": "title-2",
+        "text": "Title 2",
+      },
+    ],
+  },
+}
+`;
